@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <title> Dunia </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+    /*this is the font*/ 
+    @font-face {
+      font-family: 'Cantique';
+      src: url('C:\Desktop\sawa sawa\fonts\cantique\Cantique-Normal.otf') format('otf'),
+           url('"C:\Desktop\sawa sawa\fonts\cantique\Cantique-Normal.otf"') format('otf');
+    }
+
+    body {
+      font-family: 'Cantique', Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    #main-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #dunia-text {
+      font-size: 72px;
+      cursor: pointer;
+    }
+
+    
+    @keyframes glowing {
+    0% {
+      opacity: 0.2;
+      text-shadow: none;
+    }
+    50% {
+      opacity: 1;
+      text-shadow: 0 0 10px #58a3ff, 0 0 20px #58a3ff, 0 0 30px #58a3ff;
+    }
+    100% {
+      opacity: 0.7;
+      text-shadow: none;
+    }
+  }
+
+  .glow-text {
+    animation: glowing 7s infinite;
+  }
+
+    
+  .grow-shrink-animation {
+      animation: growShrink 30s infinite;
+    }
+  
+    @keyframes growShrink {
+      0% {
+        font-size: 30px;
+      }
+      50% {
+        font-size: 60px;
+      }
+      100% {
+        font-size: 30px;
+      }
+    }
+
+    </style>
+
+<body>
+    <div class="glow-text">
+    <div id="main-container">
+      <div id="dunia-text" class="grow-shrink-animation" onclick="openDoomsdayClock()">
+        DUNiA
+      </div>
+    </div>
+</div>
+</body>
+
+  <script>
+    function openDoomsdayClock() {
+      window.location.href = "therealdeal.html";
+    }
+  </script>
+
+<script>
+    document.getElementById("dunia").addEventListener("click", function() {
+      // Fade out the current page
+      document.body.style.opacity = 0;
+  
+      // Wait for the fade-out animation to complete
+      setTimeout(function() {
+        // Navigate to the "doomsday.html" page
+        window.location.href = "doomsday.html";
+      }, 500); // Adjust the duration as needed
+    });
+  </script>
+  
+
+<!-- <audio autoplay>
+    <source src="C:\Desktop\sawa sawa\music\ttt+8.wav" type="audio/wav">
+    Your browser does not support the audio element.
+  </audio>
+-->
+</head>
+</html>
+
+
+
+
+
+
+
+  
+
+
+

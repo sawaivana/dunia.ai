@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Doomsday Clock</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <style>
+    @font-face {
+      font-family: 'Cantique';
+      src: url('C:\Desktop\sawa sawa\fonts\cantique\Cantique-Normal.otf') format('otf'),
+           url('"C:\Desktop\sawa sawa\fonts\cantique\Cantique-Normal.otf"') format('otf');
+      /* Add more src lines for additional font file formats if needed */
+      /* Optionally, you can also specify font-weight and font-style */
+    }
+
+    body {
+      font-family: 'Cantique', Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+
+    @keyframes glowing {
+    0% {
+      opacity: 0.2;
+      text-shadow: none;
+    }
+    30% {
+      opacity: 1;
+      text-shadow: 0 0 10px #ff8888, 0 0 20px #ff3734, 0 0 30px #ff0000;
+    }
+    100% {
+      opacity: 0.7;
+      text-shadow: none;
+    }
+  }
+
+  .listen-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #337ab7;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* Hide the default audio controls */
+    audio {
+      display: none;
+    }
+
+    /* Play Button Styling */
+    .play-button {
+      display: none;
+    }
+
+    /* Show Play Button when Listen Button is clicked */
+    .listen-button:checked + audio + .play-button {
+      display: inline-block;
+    }
+
+  .glow-text {
+    animation: glowing 7s infinite;
+  }
+
+
+    #clock {
+      color: #ff0000;
+      font-size: 150px;
+      margin: 0 auto; /* Center the clock horizontally */
+      max-width: 600px; /* Set maximum width to maintain responsiveness */
+      margin-top: 200px; 
+      text-align: center; /* Center the text horizontally */
+    }
+    
+    #clock span {
+      font-size: 120px; /* Adjust the font size as needed */
+    }
+    
+    .countdown-wrapper {
+      display: flex; /* Use flexbox for horizontal alignment */
+      justify-content: center; /* Center the countdown items horizontally */
+    }
+    
+    .countdown-item {
+      text-align: center; /* Center the text within each item */
+      margin: 0 10px; /* Adjust the spacing between items */
+    }
+    
+    .countdown-label {
+      font-size: 24px; /* Adjust the font size as needed */
+    }
+
+    .icon-link {
+      position: absolute;
+      top: 650px;
+      right: 680px;
+      text-decoration: none;
+      color: #ff7979;
+    }
+
+    #socials{
+      position: absolute;
+      top: 200px;
+      right: 200px;
+      font-size: 30px;
+    }
+
+    .icon-link img {
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      margin-right: 5px;
+    }
+
+    h1 {
+      color: #ff4f4f; /* Replace with your desired color */
+    }
+        
+    .scrolling-text {
+      display: flex;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: scrollText 15s linear infinite;
+    }
+    
+    .scrolling-text div {
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    .split-link {
+      display: inline-block;
+    }
+
+    @keyframes scrollText {
+      0% {
+        transform: translateX(100%) 
+      }
+      100% {
+        transform: translateX(-100%)
+      }
+    }
+  </style>
+</head>
+
+
+<!--<a href="https://www.instagram.com/sawaivana/" class="icon-link">
+    <img src="C:\Desktop\sawa sawa\insta.jpg" alt="Icon"> instagram
+  </a>
+!-->
+<a href="https://www.instagram.com/sawaivana/" class="icon-link">visual</a>
+
+
+<body>
+  <div class="energy-bar">
+    <div class="energy-fill" id="energy-fill"></div>  
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-sm-10">
+          <h1 class="mt-5 text-center">Doomsday Clock</h1>
+
+              <div id="clock" class="mt-4">
+            <div class="countdown-wrapper">
+              <div class="countdown-item">
+                <span id="days" class="countdown-value"></span>
+                <div class="countdown-label">Days</div>
+              </div>
+              <div class="countdown-item">
+                <span id="hours" class="countdown-value"></span>
+                <div class="countdown-label">Hours</div>
+              </div>
+              <div class="countdown-item">
+                <span id="minutes" class="countdown-value"></span>
+                <div class="countdown-label">Minutes</div>
+              </div>
+              <div class="countdown-item">
+                <span id="seconds" class="countdown-value"></span>
+                <div class="countdown-label">Seconds</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scrolling-text">
+                <div><a href="https://www.instagram.com/sawaivana/">D</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">U</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">N</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">i</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">A</a></div>
+                <div>&nbsp;</div>
+                <div><a href="https://www.instagram.com/sawaivana/">D</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">U</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">N</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">i</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">A</a></div>
+                <div>&nbsp;</div>
+                <div><a href="https://www.instagram.com/sawaivana/">D</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">U</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">N</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">i</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">A</a></div>
+                <div>&nbsp;</div>
+                <div><a href="https://www.instagram.com/sawaivana/">D</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">U</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">N</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">i</a></div>
+                <div><a href="https://www.instagram.com/sawaivana/">A</a></div>
+                <div>&nbsp;</div>
+                <!-- Add more divs with <a> tags for other letters -->
+      </div>
+    </div>
+  </div>
+
+  <audio id="audio" src="C:\Desktop\sawa sawa\music\ttt+8.wav" type="audio/wav"></audio>
+
+  <script>
+
+     // Function to play the audio
+     function playAudio() {
+        var audio = document.getElementById("audio");
+        audio.play();
+      }
+
+    function updateClock() {
+      var targetDate = new Date("March 11, 2024 12:12:00");
+      var currentDate = new Date();
+      var timeDiff = targetDate - currentDate;
+      var days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+      days = String(days).padStart(2, '0');
+      hours = String(hours).padStart(2, '0');
+      minutes = String(minutes).padStart(2, '0');
+      seconds = String(seconds).padStart(2, '0');
+      document.getElementById("clock").textContent = days + "d " + hours + ":" + minutes + ":" + seconds;
+    }
+
+
+    // Add event listener to play audio on clock click
+        var clock = document.getElementById("clock");
+        clock.addEventListener("click", playAudio);
+
+    
+    setInterval(updateClock, 1000);
+  </script>
+</body>
+</html>
+
